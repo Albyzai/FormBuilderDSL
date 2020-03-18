@@ -1,4 +1,4 @@
-const label = (...children) => {
+export const label = (...children) => {
   const element: HTMLLabelElement = document.createElement('label');
 
   return {
@@ -27,5 +27,3 @@ const label = (...children) => {
     },
   };
 };
-
-export default label;

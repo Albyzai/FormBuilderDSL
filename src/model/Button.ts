@@ -1,5 +1,5 @@
-const button = (...children) => {
-  const element: HTMLButtonElement = document.createElement('input');
+export const button = (...children) => {
+  const element: HTMLButtonElement = document.createElement('button');
 
   return {
     getElement() {
@@ -37,5 +37,3 @@ const button = (...children) => {
     },
   };
 };
-
-export default button;

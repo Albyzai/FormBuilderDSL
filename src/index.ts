@@ -1,8 +1,4 @@
-import form from './model/Form';
-import container from './model/Container';
-import label from './model/Label';
-import input from './model/Input';
-import button from './model/Button';
+import { form, container, label, input, button } from './form-builder-dsl';
 
 window.onload = function() {
   const formWrapper = document.getElementById('FormWrapper');
@@ -39,26 +35,14 @@ window.onload = function() {
       .end(),
     button()
       .type('submit')
-      .text('submit')
+      .text('login')
       .withClasses(['btn', 'btn-primary'])
       .clickAction(() => console.log('clicked'))
       .end()
-  ).end();
+  )
+    .useMethod('POST')
+    .setAction('index.html')
+    .end();
 
   formWrapper.appendChild(formEl);
-
-  // form(
-  //   container(
-  //     label().text('Email Address').for('EmailInput').end(),
-  //     input().type('Email').id('EmailInput')
-  //   ).withClass('from-group'),
-  //   submitButton().text('Submit')
-  // )
-
-  // Container()
-  // Label().text('').for().end()
 };
-
-// form
-
-// this.children = [Container, SubmitButton]

@@ -1,4 +1,4 @@
-const form = (...children) => {
+export const form = (...children) => {
   const element: HTMLFormElement = document.createElement('form');
 
   return {
@@ -14,7 +14,7 @@ const form = (...children) => {
       element.method = method;
       return this;
     },
-    setAction(action) {
+    setAction(action: string) {
       element.action = action;
       return this;
     },
@@ -24,5 +24,3 @@ const form = (...children) => {
     },
   };
 };
-
-export default form;

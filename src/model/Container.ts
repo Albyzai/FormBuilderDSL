@@ -1,23 +1,21 @@
-const container = (...children) => {
-  const containerElement: HTMLDivElement = document.createElement('div');
+export const container = (...children) => {
+  const element: HTMLDivElement = document.createElement('div');
 
   return {
     getElement() {
-      return containerElement;
+      return element;
     },
     withClass(className: string) {
-      containerElement.className = className;
+      element.className = className;
       return this;
     },
     withClasses(classNames: string[]) {
-      classNames.map(className => containerElement.classList.add(className));
+      classNames.map(className => element.classList.add(className));
       return this;
     },
     end() {
-      children.map(child => containerElement.appendChild(child));
-      return containerElement;
+      children.map(child => element.appendChild(child));
+      return element;
     },
   };
 };
-
-export default container;

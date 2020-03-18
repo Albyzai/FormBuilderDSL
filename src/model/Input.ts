@@ -1,4 +1,4 @@
-const input = (...children) => {
+export const input = () => {
   const element: HTMLInputElement = document.createElement('input');
 
   return {
@@ -33,10 +33,7 @@ const input = (...children) => {
       return this;
     },
     end() {
-      children.map(child => element.appendChild(child));
       return element;
     },
   };
 };
-
-export default input;

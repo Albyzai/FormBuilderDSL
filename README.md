@@ -17,3 +17,7 @@ This is a guide on how to install and use the DSL.
 ##### Compile TS to JS
 
 ###### `npm start`
+
+##### Finally open index.html in a browser to see the result.
+
+Note: The metamodel implementation can be found in the src/index.html file

@@ -5,7 +5,6 @@ This is a project created for the SDU course 'Model-Driven Software Development'
 ## Example implementation (Login Form)
 
 ![Login Form](loginimage.png)
-Format: ![Login Form](url)
 
 ```typescript
 import { form, container, label, input, button } from './form-builder-dsl';

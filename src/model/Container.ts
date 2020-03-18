@@ -1,19 +1,22 @@
-export const container = (...children) => {
+import { DOMElement } from './DOMElement';
+
+export const container = (...children): DOMElement => {
   const element: HTMLDivElement = document.createElement('div');
 
   return {
-    getElement() {
-      return element;
+    withID(id: string): DOMElement {
+      element.id = id;
+      return this;
     },
-    withClass(className: string) {
+    withClass(className: string): DOMElement {
       element.className = className;
       return this;
     },
-    withClasses(classNames: string[]) {
+    withClasses(classNames: string[]): DOMElement {
       classNames.map(className => element.classList.add(className));
       return this;
     },
-    end() {
+    end(): HTMLDivElement {
       children.map(child => element.appendChild(child));
       return element;
     },

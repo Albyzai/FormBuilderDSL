@@ -7,17 +7,23 @@ class Input extends CompositeElement {
   }
 
   name = (name: string) => {
-    this.element.name = name;
+    let attribute = document.createAttribute("name")
+    attribute.value = name
+    this.attributes.push(attribute)
     return this;
   }
 
   type = (type: string) => {
-    this.element.type = type;
+    let attribute = document.createAttribute("type")
+    attribute.value = type
+    this.attributes.push(attribute)
     return this
   }
 
   placeholder = (placeholder: string) => {
-    this.element.placeholder = placeholder
+    let attribute = document.createAttribute("placeholder")
+    attribute.value = placeholder
+    this.attributes.push(attribute)
     return this
   }
 

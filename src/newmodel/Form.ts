@@ -7,12 +7,16 @@ class Form extends CompositeElement {
   }
 
   setAction(action: string) {
-    this.element.action = action
+    let attribute = document.createAttribute("action")
+    attribute.value = action
+    this.attributes.push(attribute)
     return this
   }
 
   useMethod(method: string) {
-    this.element.method = method
+    let attribute = document.createAttribute("method")
+    attribute.value = method
+    this.attributes.push(attribute)
     return this
   }
   

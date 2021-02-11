@@ -6,15 +6,19 @@ class Label extends CompositeElement {
     super('label', ...children);
   }
 
+ 
   for = (inputId: string) => {
-    this.element.htmlFor = inputId
+    let attribute = document.createAttribute("for")
+    attribute.value = inputId
+    this.attributes.push(attribute)
+    // this.element.htmlFor = inputId
     return this;
   }
 
-  text = (text: string) => {
-    this.element.innerHtml = text;
-    return this
-  }
+  // text = (text: string) => {
+  //   this.element.innerHtml = text;
+  //   return this
+  // }
 
 }
 

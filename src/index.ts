@@ -1,8 +1,3 @@
-import Form from './newmodel/Form'
-import Container from './newmodel/Container'
-import Label from './newmodel/Label'
-import Input from './newmodel/Input'
-import Button from './newmodel/Button'
 import FormBuilder from './newmodel/FormBuilder'
 
 

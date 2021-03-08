@@ -1,4 +1,4 @@
-import FormBuilder from './newmodel/FormBuilder'
+import FormBuilder from './model/FormBuilder'
 
 
 class LoginForm extends FormBuilder {
